@@ -63,12 +63,10 @@
                 <td><?php echo $row["amount"];?></td>
                 <td><?php echo $row["datetime"];?></td>
             </tr>
-        <?php
-        } ?>
+        <?php    } ?>
     </tbody>
     </table>
-    <?php
-    } ?>
+    <?php  } ?>
     </div>
         <footer id="footer"> Copyright © 2021, by Vaishnavi Mogal <br>For the project of The Sparks Foundation</footer>
     </body>

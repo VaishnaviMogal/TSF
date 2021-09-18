@@ -77,11 +77,11 @@
       float: right;
       font-size: 30px;
       font-weight: bold;
+      color: #000;
     }
 
     .close:hover,
     .close:focus {
-      color: #000;
       text-decoration: none;
       cursor: pointer;
     }
@@ -95,7 +95,7 @@
   <div class="btn">
     <button id="myBtn">Transfer Money</button>
   </div>
-  <form action="" method="post">
+  <form method="post">
     <div id="myModal" class="modal">
 
       <div class="modal-content">
@@ -114,19 +114,15 @@
 
   <script>
     var modal = document.getElementById("myModal");
-
     var btn = document.getElementById("myBtn");
-
     var span = document.getElementsByClassName("close")[0];
 
     btn.onclick = function () {
       modal.style.display = "block";
     }
-
     span.onclick = function () {
       modal.style.display = "none";
     }
-
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
@@ -135,27 +131,59 @@
   </script>
   <?php include 'config.php'; ?>
 
-  <?php
+   <?php
     if(isset($_POST['submit'])){
 
     $se=$_POST['sender'];
     $re=$_POST['receiver'];
     $am=$_POST['amount'];
 
+    $query = "SELECT * from user where id=$se";
+    $data = mysqli_query($conn,$query);
+    //$sql1 =  mysqli_fetch_array($data);  //returns array or output of user from which the amount is to be transferred.
+
+    $query = "SELECT * from user where id=$re";
+    $data = mysqli_query($conn,$query);
+   // $sql2 = mysqli_fetch_array($data);
+
+      //constraint to check input of negative value by user
+     if (($am)<0)
+     {
+      echo "<script> alert('Oops! Negative values cannot be transferred.');
+      </script>";
+      }
+
+      // constraint to check zero values
+     else if($am == 0){
+      echo "<script> alert('Oops! Zero value cannot be transferred.');
+      </script>";
+     }
+
+    else{
+        //deducting amount from sender's account
+       $newbalance = $sql1['balance'] - $am;
+       $query = "UPDATE USER set balance=$newbalance where id=$se";
+       mysqli_query($conn,$query);
+
+         //adding amount to reciever's account
+        $newbalance = $sql2['balance'] + $am;
+        $query = "UPDATE USER set balance=$newbalance where id=$re";
+        mysqli_query($conn, $query);
+
     $query="INSERT INTO transaction VALUES (null,'$se','$re','$am',current_timestamp())";
     $data= mysqli_query($conn, $query);
 
     if($data)
     {
-      echo "<script> alert('Transaction Successful...!')
-      window.location='transfer.php';
+      echo "<script> alert('Successfully transfered amount ".$am." to ".$re." ...!')
+      window.location='transaction.php';
       </script>";
     }
-    else{
-        echo "failed";
-    }
+    $newbalance= 0;
+    $am =0;
   }
-?>
+  }
+?> 
   <div class="bg2">
     <div class="trans">
       <table class="tb1">

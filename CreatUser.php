@@ -15,6 +15,7 @@
         padding: 20px;
         text-align: center;
         position: absolute;
+        margin-top: 50px;
         top: 50%;
         left: 50%;
         background: rgba(101, 102, 114, 0.8);
@@ -40,8 +41,8 @@
         border-radius: 05px;
     }
     .btn{
-        margin-top:60px;
-        margin-bottom:20px;
+        margin-top:50px;
+        margin-bottom:15px;
         background: lightblue;
         border-radius:40px;
         border:1px solid black;
@@ -50,6 +51,7 @@
     }    
     .btn:hover{
         transform: scale(0.96);
+        background:linear-gradient(to bottom right,cyan,yellow);
     }
         </style>
     </head>
@@ -66,13 +68,11 @@
                 <input type ="text" placeholder ="Name" name="name" class ="txt" required>
                 <input type ="email" placeholder ="Email" name="email" class="txt" required >
                 <input type ="int" placeholder ="Balance" name="balance" class="txt" required>
-                <input type ="submit" name="submit" value="Create a Account" class="btn">
+                <input type ="submit" name="submit" value="Create Account" class="btn">
         </form>
         </div>
         </body>
-       <!-- <div>
-<footer id="footer"> Copyright © 2021, by Vaishnavi Mogal <br>For the project of The Sparks Foundation</footer>
-</div> -->
+       
 </html>
     <?php
         if(isset($_POST['submit'])){
@@ -81,12 +81,12 @@
         $em= $_POST['email'];
         $ba= $_POST['balance'];
 
-        $query="INSERT INTO USER VALUES ( null,    '$nm',    '$em','$ba')";
+        $query="INSERT INTO USER VALUES ( null,'$nm','$em','$ba')";
         $data= mysqli_query($conn, $query);
 
         if($data)
         {
-            echo "<script> alert('Acount Created         Successfully...!')
+            echo "<script> alert('Acount Created Successfully...!')
             window.location='transfer.php';
             </script>";
         }

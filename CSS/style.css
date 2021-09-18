@@ -113,6 +113,7 @@ a{text-decoration: none;}
 #red:hover{
     background-color: maroon;
     color: white;
+    border: 1px solid rgb(186, 250, 10);
 }
 #green{
     background-color: transparent;
@@ -125,6 +126,7 @@ a{text-decoration: none;}
 #green:hover{
     background-color:green;
     color: white;
+    border: 1px solid rgb(250, 38, 10);
 }
 #blue{
     background-color: transparent;
@@ -137,6 +139,7 @@ a{text-decoration: none;}
 #blue:hover{
     background-color: blue;
     color: white;
+    border: 1px solid rgb(250, 214, 10);
 }
 #footer{
     background-color: rgb(56, 54, 54);

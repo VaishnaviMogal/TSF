@@ -57,7 +57,7 @@
     <body >
         <?php include('nav.php'); ?>
         
-        <img  src="../TSF Bank/Images/customer.jpg"/>
+        <img  src="/Images/customer.jpg"/>
 
         <?php include 'config.php'; ?>
            

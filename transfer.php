@@ -89,7 +89,7 @@
 </head>
 
 <body>
-  <img src="../TSF Bank/Images/transfer.jpg" />
+  <img src="/Images/transfer.jpg" />
   <?php include('nav.php'); ?>
 
   <div class="btn">

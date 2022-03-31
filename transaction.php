@@ -29,7 +29,7 @@
         </style>
     </head>
     <body>
-        <img src="../TSF Bank/Images/transaction.jpg"/>
+        <img src="/Images/transaction.jpg"/>
         <?php include('nav.php'); ?>
        
         <div class="bg3">

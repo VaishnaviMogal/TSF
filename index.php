@@ -12,13 +12,13 @@
 
 <body>
     <nav>
-        <div> <a href="../TSF Bank/index.html"><img class="logo" src="Images/logo.png" alt=" can't load the logo" /></a>
+        <div> <a href="index.php"><img class="logo" src="Images/logo.png" alt=" can't load the logo" /></a>
         </div>
         <ul>
-            <li><a class="active" href="../TSF Bank/index.html"><b>Home</b></a></li>
-            <li><a href="../TSF Bank/transfer.php"><b>User</b></a></li>
-            <li><a href="/About.html"><b>About</b></a></li>
-            <li><a href="/Contact.html"><b>Contact</b></a></li>
+            <li><a class="active" href="index.php"><b>Home</b></a></li>
+            <li><a href="transfer.php"><b>User</b></a></li>
+            <li><a href="About.html"><b>About</b></a></li>
+            <li><a href="Contact.html"><b>Contact</b></a></li>
         </ul>
     </nav>
     <h1>Welcome To Sparks Bank</h1>
@@ -27,10 +27,10 @@
         <div class="container">
 
             <ul>
-                <li class="action"><a href="../TSF Bank/CreatUser.php"><button id="red">Creat User</button></a></li>
-                <li class="action"><a href="../TSF Bank/transfer.php"><button id="green">Transfer Money</button></a>
+                <li class="action"><a href="CreatUser.php"><button id="red">Creat User</button></a></li>
+                <li class="action"><a href="transfer.php"><button id="green">Transfer Money</button></a>
                 </li>
-                <li class="action"><a href="../TSF Bank/transaction.php"><button id="blue">Transaction
+                <li class="action"><a href="transaction.php"><button id="blue">Transaction
                             History</button></a></li>
             </ul>
         </div>

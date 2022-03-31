@@ -11,12 +11,11 @@
         box-sizing: border-box;
     }       
     .userform{
-        width: 400px;
-        padding: 20px;
+        width: 390px;
+        padding: 10px;
         text-align: center;
-        position: absolute;
-        margin-top: 50px;
-        top: 50%;
+        position: relative;
+        top: 35%;
         left: 50%;
         background: rgba(101, 102, 114, 0.8);
         transform: translate(-50%,-50%);
@@ -31,7 +30,7 @@
     form input{
         display:block;
         width:100%;
-        padding:10px;
+        padding:8px;
         margin-top:20px;
         box-sizing: border-box;
         font-size:16px;
@@ -41,8 +40,8 @@
         border-radius: 05px;
     }
     .btn{
-        margin-top:50px;
-        margin-bottom:15px;
+        margin-top:40px;
+        margin-bottom:10px;
         background: lightblue;
         border-radius:40px;
         border:1px solid black;
